@@ -13,13 +13,15 @@ const StyledContainer = styled.div`
     const xCalc = (props.slidePosition * 100)
     return `translateX(${xCalc}%);`
   }}
-  transition: transform 0.5s ease-in;
+  transition: transform 0.5s linear;
   background: #f9f9f9;
 `
 
 const CarouselContent= styled.div`
   display: flex; 
   justify-content: center;
+  font-size: 4em;
+  color: grey;
   align-items: center;
   height: 100%;
   background: white;
@@ -29,10 +31,10 @@ const CarouselContent= styled.div`
 }
 `
 
-const CarouselItem = ({slidePosition}) => {
+const CarouselItem = ({slidePosition, label}) => {
   return <StyledContainer slidePosition={slidePosition} >
     <CarouselContent>
-      Hi
+      {label}
     </CarouselContent>
   </StyledContainer>
 };

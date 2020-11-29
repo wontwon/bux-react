@@ -1,0 +1,1 @@
+export const CAROUSEL_PANEL_DATA = [1, 2, 3, 4]
