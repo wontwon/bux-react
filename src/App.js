@@ -1,12 +1,13 @@
 import "./App.css";
 
+// external modules
+import { Carousel } from "./shared";
+
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="placeholder">
-          Replace this div with your Carousel component
-        </div>
+        <Carousel />
       </div>
     </div>
   );
