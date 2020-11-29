@@ -7,8 +7,9 @@ const StyledContainer = styled.div`
 `
 
 const StyledBtn = styled.div`
-  font-size: 50px;
+  font-size: 100px;
   cursor: pointer;
+  color: grey;
 `
 
 const CarouselNavBtn = ({isRight, handleNavClick}) => {

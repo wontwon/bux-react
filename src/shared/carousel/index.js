@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   align-items: center;
   height: 500px;
   width: 100%;
-  background: green;
+  background: #f9f9f9;
   position: relative;
   padding-left: calc(100vw / ${PANEL_COUNT})
 `
@@ -20,8 +20,8 @@ const StyledContainer = styled.div`
 const Carousel = () => {
   const [ slidePosition, setSlidePosition ] = useState(0);
 
-  const handleLeftNavClick = () => setSlidePosition(s => s -= 1)
-  const handleRightNavClick = () => setSlidePosition(s => s += 1)
+  const handleLeftNavClick = () => setSlidePosition(s => s += 1)
+  const handleRightNavClick = () => setSlidePosition(s => s -= 1)
 
   return <StyledContainer>
     <CarouselNav 

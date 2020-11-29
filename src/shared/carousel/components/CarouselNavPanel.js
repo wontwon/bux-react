@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   justify-content: ${props => props.isRight ? 'flex-start' : 'flex-end'};
   height: 100%;
   width: calc(100vw / ${PANEL_COUNT});
-  background: orange;
+  background: #f9f9f9;
   z-index: 100;
 `;
 
