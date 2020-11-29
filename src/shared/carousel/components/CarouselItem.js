@@ -1,18 +1,25 @@
+// node modules
 import React from "react";
 import styled from "styled-components"
 
-const StyledCarouselItemContainer = styled.div`
+// internal imports
+import { PANEL_COUNT } from "../constants";
+
+const StyledContainer = styled.div`
   display: flex; 
   justify-content: center;
   align-items: center;
-  height: 200px;
-  width: calc(100% / 5);
+  width: calc(100vw / ${PANEL_COUNT});
+  height: calc(100vw / ${PANEL_COUNT});
   background: white;
-  margin: 10px;
+  margin: 5px;
+  border-radius: 10px;
 `
 
- export const CarouselItem = () => {
-  return <StyledCarouselItemContainer>
+const CarouselItem = () => {
+  return <StyledContainer>
     Carousel Item
-  </StyledCarouselItemContainer>
- };
+  </StyledContainer>
+};
+
+export default CarouselItem;
