@@ -11,15 +11,13 @@ const StyledBtn = styled.div`
   cursor: pointer;
 `
 
-const CarouselNavBtn = ({isRight}) => {
+const CarouselNavBtn = ({isRight, handleNavClick}) => {
   const btnIcon = isRight ? "›" : "‹";
 
-  const handleClick = () => {
-    alert('do something')
-  }
+  const handleClick = () => handleNavClick();
 
   return <StyledContainer>
-    <StyledBtn>{btnIcon}</StyledBtn>
+    <StyledBtn onClick={handleClick}>{btnIcon}</StyledBtn>
   </StyledContainer>
 }
 

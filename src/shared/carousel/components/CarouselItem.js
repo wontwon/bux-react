@@ -6,19 +6,32 @@ import styled from "styled-components"
 import { PANEL_COUNT } from "../constants";
 
 const StyledContainer = styled.div`
+  width: calc(100vw / ${PANEL_COUNT});
+  height: calc(100vw / ${PANEL_COUNT});
+  padding: 5px;
+  background: blue;
+  transform: ${props => {
+    const xCalc = (props.slidePosition * 100)
+    return `translateX(${xCalc}%);`
+  }}
+  transition: transform 0.5s linear;
+
+`
+
+const CarouselContent= styled.div`
   display: flex; 
   justify-content: center;
   align-items: center;
-  width: calc(100vw / ${PANEL_COUNT});
-  height: calc(100vw / ${PANEL_COUNT});
+  height: 100%;
   background: white;
-  margin: 5px;
-  border-radius: 10px;
+  width: 100%;
 `
 
-const CarouselItem = () => {
-  return <StyledContainer>
-    Carousel Item
+const CarouselItem = ({slidePosition}) => {
+  return <StyledContainer slidePosition={slidePosition} >
+    <CarouselContent>
+      Hi
+    </CarouselContent>
   </StyledContainer>
 };
 

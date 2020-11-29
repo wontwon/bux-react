@@ -1,9 +1,7 @@
 import CarouselItem from "./CarouselItem";
-import CarouselNavBtn from "./CarouselNavBtn";
-import CarouselNavPanel from "./CarouselNavPanel";
+import CarouselNav from "./CarouselNav"
 
 export {
   CarouselItem,
-  CarouselNavBtn,
-  CarouselNavPanel
+  CarouselNav
 }

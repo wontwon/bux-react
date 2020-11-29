@@ -1,9 +1,9 @@
 // node modules
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 // internal imports
-import { CarouselItem, CarouselNavPanel } from "./components";
+import { CarouselItem, CarouselNav } from "./components";
 import { PANEL_COUNT } from "./constants";
 
 const StyledContainer = styled.div`
@@ -17,29 +17,20 @@ const StyledContainer = styled.div`
   padding-left: calc(100vw / ${PANEL_COUNT})
 `
 
-const TestContainer = styled.div`
- position: absolute;
- display: flex;
- left: 0;
- width: 100%;
- height: 100%;
- justify-content: space-between;
-`
-
-const CarouselNavContainer = () => {
-  return <TestContainer>
-    <CarouselNavPanel/>
-    <CarouselNavPanel isRight />
-  </TestContainer>  
-}
-
 const Carousel = () => {
+  const [ slidePosition, setSlidePosition ] = useState(0);
+
+  const handleLeftNavClick = () => setSlidePosition(s => s -= 1)
+  const handleRightNavClick = () => setSlidePosition(s => s += 1)
+
   return <StyledContainer>
-    <CarouselNavContainer />
-    <CarouselItem />
-    <CarouselItem />
-    <CarouselItem />
-    <CarouselItem />
+    <CarouselNav 
+      handleLeftNavClick={handleLeftNavClick} 
+      handleRightNavClick={handleRightNavClick} />
+    <CarouselItem slidePosition={slidePosition} />
+    <CarouselItem slidePosition={slidePosition} />
+    <CarouselItem slidePosition={slidePosition} />
+    <CarouselItem slidePosition={slidePosition} />
   </StyledContainer>
 }
 

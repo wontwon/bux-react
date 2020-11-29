@@ -13,6 +13,7 @@ const StyledContainer = styled.div`
   height: 100%;
   width: calc(100vw / ${PANEL_COUNT});
   background: orange;
+  z-index: 100;
 `;
 
 const CarouselNavPanel = (props) => {
