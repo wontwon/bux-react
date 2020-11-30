@@ -2,6 +2,8 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "proptypes";
+import { IconButton } from "@material-ui/core";
+import { ChevronLeft, ChevronRight } from "@material-ui/icons";
 
 const StyledContainer = styled.div`
   padding: 25px;
@@ -15,12 +17,12 @@ const StyledBtn = styled.div`
 `
 
 const CarouselNavBtn = ({isRight, handleNavClick}) => {
-  const btnIcon = isRight ? "›" : "‹";
+  const btnIcon = isRight ? <ChevronRight /> : <ChevronLeft />;
 
   const handleClick = () => handleNavClick();
 
   return <StyledContainer>
-    <StyledBtn onClick={handleClick}>{btnIcon}</StyledBtn>
+    <IconButton onClick={handleClick}>{btnIcon}</IconButton>
   </StyledContainer>
 }
 

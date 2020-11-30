@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
     const xCalc = props.isStatic ? 0 : (props.slidePosition * 100)
     return `translateX(${xCalc}%);`
   }}
-  transition: transform 0.3s linear;
+  transition: transform 0.3s ease-in;
   background: #f9f9f9;
 `
 
