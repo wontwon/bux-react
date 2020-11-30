@@ -1,9 +1,8 @@
 import "./App.css";
 import { Carousel } from "sb-carousel";
 
-// external modules
-// import { Carousel } from "./shared";
-
+// external modules 
+// import { Carousel } from "./shared"; Copied carousel source into an npm module and published it as sb-carousel
 
 function App() {
   return (
