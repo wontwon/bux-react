@@ -9852,6 +9852,24 @@ saxes@^5.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
+sb-carousel@0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/sb-carousel/-/sb-carousel-0.1.6.tgz#0e487c79466ca78b72a7e68c23b1769c59b49c92"
+  integrity sha512-HL9ex5AD2xRaAv78IxLFXnFk3YIHTWYHz4MmhvWPHgl29sul6KTHfqIOPsjzUXCWdXjCR/suT/DXrgccCcANMQ==
+  dependencies:
+    "@material-ui/core" "^4.11.1"
+    "@material-ui/icons" "^4.9.1"
+    "@testing-library/jest-dom" "^5.11.4"
+    "@testing-library/react" "^11.1.0"
+    "@testing-library/user-event" "^12.1.10"
+    proptypes "^1.1.0"
+    react "^17.0.1"
+    react-dom "^17.0.1"
+    react-scripts "4.0.1"
+    shortid "^2.2.16"
+    styled-components "^5.2.1"
+    web-vitals "^0.2.4"
+
 scheduler@^0.20.1:
   version "0.20.1"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.1.tgz#da0b907e24026b01181ecbc75efdc7f27b5a000c"

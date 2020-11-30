@@ -1,7 +1,8 @@
 import "./App.css";
+import { Carousel } from "sb-carousel";
 
 // external modules
-import { Carousel } from "./shared";
+// import { Carousel } from "./shared";
 
 
 function App() {
