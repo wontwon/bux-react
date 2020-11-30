@@ -1,6 +1,7 @@
 // node modules
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "proptypes";
 
 // internal imports
 import CarouselNavPanel from "./CarouselNavPanel";
@@ -19,6 +20,12 @@ const CarouselNav = ({handleLeftNavClick, handleRightNavClick, length}) => {
     <CarouselNavPanel handleNavClick={handleLeftNavClick} length={length} />
     <CarouselNavPanel handleNavClick={handleRightNavClick} length={length} isRight />
   </StyledContainer>  
+}
+
+CarouselNav.propTypes = {
+  handleLeftNavClick: PropTypes.func,
+  handleRightNavClick: PropTypes.func,
+  length: PropTypes.number
 }
 
 export default CarouselNav

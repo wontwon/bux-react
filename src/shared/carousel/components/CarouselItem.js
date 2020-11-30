@@ -1,6 +1,7 @@
 // node modules
 import React from "react";
 import styled from "styled-components"
+import PropTypes from "proptypes";
 
 const StyledContainer = styled.div`
   min-width: ${props => `calc(100vw / ${props.length})`};
@@ -34,5 +35,16 @@ const CarouselItem = ({slidePosition, label, length, isStatic}) => {
     </CarouselContent>
   </StyledContainer>
 };
+
+CarouselItem.propTypes = {
+  slidePosition: PropTypes.number,
+  label: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string
+  ]),
+  length: PropTypes.number,
+  isStatic: PropTypes.bool
+}
+
 
 export default CarouselItem;

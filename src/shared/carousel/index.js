@@ -6,7 +6,6 @@ import shortid from "shortid";
 
 // internal imports
 import { CarouselItem, CarouselNav } from "./components";
-import { PANEL_COUNT } from "./constants";
 import { CAROUSEL_PANEL_DATA } from "../../constants";
 
 const StyledContainer = styled.div`
@@ -17,7 +16,7 @@ const StyledContainer = styled.div`
   width: 100%;
   background: #f9f9f9;
   position: relative;
-  padding-left: calc(100vw / ${PANEL_COUNT})
+  padding-left: ${props => `calc(100vw / ${props.length}`})
 `
 
 const AnimationContainer = styled.div`
@@ -123,7 +122,7 @@ const Carousel = (props) => {
     })
   }
   
-  return <StyledContainer>
+  return <StyledContainer length={data.length}>
     <CarouselNav
       length={data.length}
       handleLeftNavClick={handleLeftNavClick} 

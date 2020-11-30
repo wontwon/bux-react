@@ -1,5 +1,7 @@
+// node modules
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "proptypes";
 
 const StyledContainer = styled.div`
   padding: 25px;
@@ -21,5 +23,10 @@ const CarouselNavBtn = ({isRight, handleNavClick}) => {
     <StyledBtn onClick={handleClick}>{btnIcon}</StyledBtn>
   </StyledContainer>
 }
+
+CarouselNavBtn.propTypes = {
+  isRight: PropTypes.bool,
+  handleNavClick: PropTypes.func
+};
 
 export default CarouselNavBtn
