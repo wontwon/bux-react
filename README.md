@@ -1,3 +1,10 @@
+# Developer Notes 
+ * To run, clone repo to your local machine, run ``` yarn ``` to install deps
+ * After installing node modules, run ``` yarn start ```
+ * You'll notice in the src file there is a shared folder containing the source for the Carousel module. That source was moved to another repo and published on npm as "sb-carousel" and imported into App.js. 
+   * sb-carousel repo: https://github.com/wontwon/sb-carousel  
+
+
 # s4-react-test
 
 A take-home coding project to demonstrate knowledge of React.
