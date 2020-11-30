@@ -10,12 +10,6 @@ const StyledContainer = styled.div`
   font-size: 30px;
 `
 
-const StyledBtn = styled.div`
-  font-size: 100px;
-  cursor: pointer;
-  color: grey;
-`
-
 const CarouselNavBtn = ({isRight, handleNavClick}) => {
   const btnIcon = isRight ? <ChevronRight /> : <ChevronLeft />;
 
