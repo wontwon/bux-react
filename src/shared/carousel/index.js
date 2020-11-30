@@ -72,7 +72,7 @@ const Carousel = (props) => {
         animationPanels.pop();
         return animationPanels;
       })
-    }, 550)
+    }, 600)
   }
   const handleRightNavClick = () => {
     setSlidePosition(0)
@@ -106,7 +106,7 @@ const Carousel = (props) => {
         return animationPanels;
       })
       setSlidePosition(0);
-    }, 550)
+    }, 600)
   }
 
   const renderAnimatedPanels = () => {

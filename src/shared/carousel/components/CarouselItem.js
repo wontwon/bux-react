@@ -10,7 +10,7 @@ const StyledContainer = styled.div`
     const xCalc = props.isStatic ? 0 : (props.slidePosition * 100)
     return `translateX(${xCalc}%);`
   }}
-  transition: transform 0.25s linear;
+  transition: transform 0.3s linear;
   background: #f9f9f9;
 `
 
@@ -28,7 +28,6 @@ const CarouselContent= styled.div`
 `
 
 const CarouselItem = ({slidePosition, label, length, isStatic}) => {
-  console.log(slidePosition);
   return <StyledContainer isStatic={isStatic} slidePosition={slidePosition} length={length} >
     <CarouselContent>
       {label}
