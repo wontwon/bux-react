@@ -11,13 +11,13 @@ const StyledContainer = styled.div`
   align-items: center;
   justify-content: ${props => props.isRight ? 'flex-start' : 'flex-end'};
   height: 100%;
-  width: calc(100vw / ${PANEL_COUNT});
+  width: calc(90vw / ${PANEL_COUNT});
   background: #f9f9f9;
   z-index: 100;
 `;
 
 const CarouselNavPanel = (props) => {
-  return <StyledContainer isRight={props.isRight}>
+  return <StyledContainer isRight={props.isRight} length={props.length} >
     <CarouselNavBtn {...props} />
   </StyledContainer>
 };
