@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
   align-items: center;
   justify-content: ${props => props.isRight ? 'flex-start' : 'flex-end'};
   height: 100%;
-  width: ${props => `calc(90vw / ${props.length}`});
+  width: ${props => props.isRight ? `calc(87vw / ${props.length}` : `calc(100vw / ${props.length}`});
   background: #f9f9f9;
   z-index: 100;
 `;

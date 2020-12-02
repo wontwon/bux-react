@@ -6,12 +6,12 @@ import PropTypes from "proptypes";
 const StyledContainer = styled.div`
   min-width: ${props => `calc(100vw / ${props.length})`};
   height: ${props => `calc(100vw / ${props.length})`};
-  margin-right: 10px;
+  margin: 5px;
   transform: ${props => {
     const xCalc = props.isStatic ? 0 : (props.slidePosition * 100)
     return `translateX(${xCalc}%);`
   }}
-  transition: transform 0.3s ease-in;
+  transition: transform 0.3s linear;
   background: #f9f9f9;
 `
 

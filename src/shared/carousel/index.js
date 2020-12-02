@@ -40,8 +40,7 @@ const Carousel = (props) => {
   const [ animating, toggleAnimating ] = useState(false);
 
   const handleLeftNavClick = () => {
-    if (!infinite && slidePosition === 0) return
-    setSlidePosition(-1)
+    setSlidePosition(-1.03)
     setAnimationPanels(s => {
       let firstVal= s[0].value;
       const newEl = {
@@ -75,7 +74,6 @@ const Carousel = (props) => {
   }
   const handleRightNavClick = () => {
     setSlidePosition(0)
-    if (!infinite && slidePosition === ((data.length - (data.length-1)) * -1)) return
     toggleAnimating(true);  
     setTimeout(() => {
       setSlidePosition(-1)
